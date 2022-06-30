@@ -80,7 +80,4 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  <<: *default
-  database: backend_gc_tracker_production
-  username: backend_gc_tracker
-  password: <%= ENV["BACKEND_GC_TRACKER_DATABASE_PASSWORD"] %>
+  url: <%= ENV["DATABASE_URL"] %>
